@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileLab1.MainPage"
+             Title="Oleksii Morozov">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0">
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Oleksii Morozov and Maks Kochanov" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <Label Text="Choose your age" FontSize="Title"/>
+            <Label x:Name="header" Text="Slider" FontSize="Large" />
+            <Slider Minimum="0" Maximum="80" Value="20" ValueChanged="slider_ValueChanged"
+            MinimumTrackColor="DeepPink" MaximumTrackColor="Gray" ThumbColor="DeepPink" />
+        </StackLayout>
+        <StackLayout Grid.Row="1">
+            <Entry x:Name="nameEntry" Placeholder="Enter your name"/>
+            <Button Text="Submit" Clicked="Button_Clicked"/>
+            <Label x:Name="fullName" Text="" FontSize="18" HorizontalTextAlignment="Center" TextColor="Black"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>
